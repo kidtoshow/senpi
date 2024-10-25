@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>易子學</title>
+    <title>大學伴</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}" />
     <!-- Bootstrap icons-->
@@ -41,7 +41,7 @@
                             href="{{route('study-abroad')}}">小學堂｜推薦</a></li>
                     @if(auth()->check())
                     <li class="l-header-2__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('home')}}">易子學系統</a></li>
+                            href="{{route('home')}}">大學伴系統</a></li>
                     <li class="l-header-2__li nav-item">
                         <a href="{{route('home')}}">
                             <svg class="l-header-2__thumbNail" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +160,7 @@
                     <!-- desk ver -->
                     <div class="l-footer__siteMap_desk">
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>加入｜易子學</h6>
+                            <h6>加入｜大學伴</h6>
                             <div>
                                 <a href="{{route('login')}}">登入｜註冊</a>
                                 <a href="https://lin.ee/RjpZvEC">聯絡我們</a>
@@ -187,7 +187,7 @@
                             </div>
                         </div>
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>關於｜易子學</h6>
+                            <h6>關於｜大學伴</h6>
                             <div>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/about-us">關於我們</a>

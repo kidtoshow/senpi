@@ -24,12 +24,9 @@ class FacebookController extends Controller
 
     public function login()
     {
-        logger($this->clientId);
-        logger($this->clientSecret);
-        logger($this->redirectUri);
 //        $url = 'https://www.facebook.com/v2.12/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
-//        $url = 'https://www.facebook.com/v20.0/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
-//        return redirect($url);
+        $url = 'https://www.facebook.com/v20.0/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
+        return redirect($url);
     }
 
     public function callback(Request $request)

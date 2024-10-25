@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Yizixue',
+    'name' => 'SENPAI',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Yizixue</b> admin',
+    'logo' => '<b>SENPAI</b> admin',
 
     /*
     |--------------------------------------------------------------------------
