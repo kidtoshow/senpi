@@ -61,7 +61,7 @@ class ServiceAgreementController extends AdminController
     {
         $form = new Form(new ServiceAgreement());
 
-        $form->textarea('content', __('Content'));
+        $form->tinymce('content', __('Content'));
 
         return $form;
     }
