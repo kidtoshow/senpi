@@ -20,7 +20,7 @@ class AddImagePathToUniversity extends Migration
             $table->string('area')->nullable()->comment('區域');
             $table->string('state')->nullable()->comment('州');
             $table->string('school_badge')->nullable()->comment('校徽');
-            $table->string('image_path')->nullable()->comment('圖片位置');
+//            $table->string('image_path')->nullable()->comment('圖片位置');
         });
     }
 
@@ -31,11 +31,11 @@ class AddImagePathToUniversity extends Migration
      */
     public function down()
     {
-        if(Schema::hasColumn('university', 'image_path')){
-            Schema::table('university', function (Blueprint $table) {
-                $table->dropColumn(['image_path']);
-            });
-        }
+//        if(Schema::hasColumn('university', 'image_path')){
+//            Schema::table('university', function (Blueprint $table) {
+//                $table->dropColumn(['image_path']);
+//            });
+//        }
         Schema::table('university', function (Blueprint $table) {
             $table->dropColumn(['english_name', 'chinese_name', 'country', 'area', 'state', 'school_badge']);
         });

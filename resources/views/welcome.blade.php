@@ -127,7 +127,7 @@
         <div class="col-md-12 p-0 mt-5">
             <!-- title -->
             <h3 class="o-welcomeTitle mb-5">
-                <a href="{{route('university-list')}}">好學校｜關注</a>
+                <a href="{{route('university-list')}}">好行業｜關注</a>
             </h3>
             <div class="p-5">
                 <div class="l-university">
@@ -153,7 +153,7 @@
                                         <h4>{{ \Illuminate\Support\Str::limit($university->english_name, 25) }}
                                         </h4>
                                         <h5 class="p-2">目前有<a
-                                                href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位學長姊
+                                                href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位大學伴
                                         </h5>
                                     </div>
                                 </div>
@@ -469,7 +469,7 @@
         <div class="row">
             <div class="col-md-12">
                 <section class="l-innerbody__local">
-                    <h6>地區找學長姐</h6>
+                    <h6>地區找大學伴</h6>
                     <div class="row">
                         <p class="col-md-4">
                             <a href="{{route('university-list', ['country'=>'USA'])}}"

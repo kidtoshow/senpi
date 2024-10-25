@@ -11,7 +11,7 @@
                     <h4 class="c-breadcrumbs__prePage"><a href="{{url('/')}}"
                             class="text-decoration-none text-black">首頁</a>
                         >
-                        留學誌推薦
+                        小學堂推薦
                     </h4>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                             建立留學諮詢事業
                             <br>
                         </p>
-                        <a class="o-lightBtn m-3" href="{{route('pay-product-list')}}">立即成為學長姐</a>
+                        <a class="o-lightBtn m-3" href="{{route('pay-product-list')}}">立即成為大學伴</a>
                     </div>
                     @endif
                 </div>

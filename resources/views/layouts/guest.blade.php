@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>易子學</title>
+    <title>Senpai</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}" />
     <!-- Bootstrap icons-->
@@ -27,15 +27,15 @@
 <!-- desk ver navbar-->
 <nav class="l-header l-header__hideOnDesk navbar navbar-expand-lg">
         <a class="l-header__logo" href="{{url('/')}}">
-            <img id="logoImg" src="{{asset('uploads/images/logo.png')}}" alt="logo">
+            <img id="logoImg" src="{{asset('uploads/images/senpai-color.png')}}" alt="logo">
         </a>
         <div class="l-header__navBar">
             <div class="l-header__navItems collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('senior')}}">學長姐｜快找</a></li>
+                            href="{{route('senior')}}">大學伴｜快找</a></li>
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('study-abroad')}}">留學誌｜推薦</a></li>
+                            href="{{route('study-abroad')}}">小學堂｜推薦</a></li>
                     @if(auth()->check())
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
                             href="{{route('home')}}">易子學系統</a></li>
@@ -75,19 +75,19 @@
         <div class="container p-3">
             <div class="row">
                 <!-- logo -->
-                <div class="col-5">
+                <div class="col-2">
                     <a href="{{url('/')}}">
-                        <img id="logoImgPhone" src="{{asset('uploads/images/logo.png')}}" alt="logo">
+                        <img id="logoImgPhone" src="{{asset('uploads/images/senpai-color.png')}}" alt="logo">
                     </a>
                 </div>
                 <!-- toggler -->
-                <div class="col-4 text-end align-content-center">
+                <div class="col-8 text-end align-content-end">
                     <button class="l-header__hamburger" type="button" data-bs-toggle="collapse" onclick="bg_change()"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
                 </div>
                 <!-- thumb nail -->
-                <div class="col-3">
+                <div class="col-2">
                     @if(auth()->check())
                     <a href="{{route('home')}}">
                         <svg class="l-header__thumbNail" viewbox="0 0 80 80">
@@ -116,10 +116,10 @@
         <!-- nav items -->
         <div class="l-header__navItems collapse navbar-collapse" id="navbarSupportedContent">
             <div class="l-header__links">
-                <a href="{{route('senior')}}">學長姐｜快找</a>
+                <a href="{{route('senior')}}">大學伴｜快找</a>
             </div>
             <div class="l-header__links">
-                <a href="{{route('study-abroad')}}">留學誌｜推薦</a>
+                <a href="{{route('study-abroad')}}">小學堂｜推薦</a>
             </div>
             <div class="l-header__links">
                 @if(auth()->check())
@@ -166,16 +166,16 @@
                         <div class="l-footer__siteMap_desk_topic">
                             <h6>關於｜會員</h6>
                             <div>
-                                <a href="{{route('senior')}}">找學長姐</a>
-                                <a href="{{route('university-list')}}">找學校</a>
+                                <a href="{{route('senior')}}">找大學伴</a>
+                                <a href="{{route('university-list')}}">找行業</a>
                                 <a href="{{route('qna')}}">問與答</a>
-                                <a href="{{route('study-abroad')}}">留學誌</a>
+                                <a href="{{route('study-abroad')}}">小學堂</a>
                             </div>
                         </div>
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>關於｜學長姐</h6>
+                            <h6>關於｜大學伴</h6>
                             <div>
-                                <a href="{{route('pay-product-list')}}">成為學長姐</a>
+                                <a href="{{route('pay-product-list')}}">成為大學伴</a>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/yizixue-faq">教戰守則</a>
                                 <a href="/subscription-agreement">付費訂閱條款</a>
@@ -188,7 +188,7 @@
                             <div>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/about-us">關於我們</a>
-                                <a href="">前輩網</a>
+                                <a href="https:://yizixue.com.tw">易子學</a>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/service-agreement">服務條款</a>
                                 <!-- 會員規約 -->

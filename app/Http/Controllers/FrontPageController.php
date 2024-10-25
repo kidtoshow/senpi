@@ -45,7 +45,7 @@ class FrontPageController extends Controller
         $posts = Post::whereIn('uid', $users)->with('category.postCategory')->inRandomOrder()->limit(5)->get();
         $posts->transform(function($item){
             return [
-                'topic' => '留學誌',
+                'topic' => '小學堂',
                 'id' => $item->id,
                 'body' => Str::limit(strip_tags($item->body)),
                 'title' => $item->title,
@@ -59,7 +59,7 @@ class FrontPageController extends Controller
         {
             $bullet->transform(function($item){
                return [
-                   'topic' => '易子學公告',
+                   'topic' => 'SENPAI公告',
                    'id' => $item->id,
                    'body' => Str::limit(strip_tags($item->message)),
                    'title' => '最新公告',

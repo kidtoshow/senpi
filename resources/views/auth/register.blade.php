@@ -55,7 +55,7 @@
                                      <!-- this section have been updated, please check the from still submit the right infos. -->
                                     <div class="form-group {{ $errors->has('university') ? ' has-error' : '' }}">
                                         <!-- this input tag can search for the school names -->
-                                        <input id="input" placeholder="就讀學校" list="universityList" class="form-control form-control-user o-input">
+                                        <input id="input" placeholder="行業" list="universityList" class="form-control form-control-user o-input">
                                         <input type="hidden" name="university" id="university">
                                         @if ($errors->has('university'))
                                         <span class="help-block alert-danger">
@@ -137,7 +137,7 @@
                                                         href="{{route('service-agreement')}}" target="_blank">服務條款</a>』
                                                     『<a href="{{route('disclaimer')}}" target="_blank">免責聲明</a>』、『<a
                                                         href="{{route('subscription-agreement')}}"
-                                                        target="_blank">服務提供者(學長姐，付費會員)服務條款</a>』等所載內容及其意義，我同意該等條款規定，並願遵守網站現今，嗣後規範的各種規則。
+                                                        target="_blank">服務提供者(大學伴，付費會員)服務條款</a>』等所載內容及其意義，我同意該等條款規定，並願遵守網站現今，嗣後規範的各種規則。
                                                 </label>
                                             </div>
                                             @if ($errors->has('check_contract'))

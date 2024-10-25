@@ -11,15 +11,25 @@ use Auth;
 
 class FacebookController extends Controller
 {
-    private $clientId = '373524802044694';
-    private $clientSecret = '7e4be9ff52ce598a391d3b7686ab7707';
-    private $redirectUri = 'https://yizixue.com.tw/facebook-callback';
+    private $clientId;
+    private $clientSecret;
+    private $redirectUri;
+
+    public function __construct()
+    {
+        $this->clientId = env('FACEBOOK_CLIENT_ID');
+        $this->clientSecret = env('FACEBOOK_CLIENT_SECRET');
+        $this->redirectUri = env('FACEBOOK_REDIRECT_URI');
+    }
 
     public function login()
     {
+        logger($this->clientId);
+        logger($this->clientSecret);
+        logger($this->redirectUri);
 //        $url = 'https://www.facebook.com/v2.12/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
-        $url = 'https://www.facebook.com/v20.0/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
-        return redirect($url);
+//        $url = 'https://www.facebook.com/v20.0/dialog/oauth?client_id=' . $this->clientId . '&redirect_uri=' . urlencode($this->redirectUri) . '&scope=email';
+//        return redirect($url);
     }
 
     public function callback(Request $request)

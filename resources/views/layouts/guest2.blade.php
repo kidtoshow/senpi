@@ -30,15 +30,15 @@
     <!-- desk ver navbar-->
     <nav class="l-header-2 l-header-2__hideOnDesk navbar navbar-expand-lg">
         <a class="l-header-2__logo" href="{{url('/')}}">
-            <img id="logoImg" src="{{asset('uploads/images/logo.png')}}" alt="logo">
+            <img id="logoImg" src="{{asset('uploads/images/senpai-color.png')}}" alt="logo">
         </a>
         <div class="l-header-2__navBar">
             <div class="l-header-2__navItems collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="l-header-2__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('senior')}}">學長姐｜快找</a></li>
+                            href="{{route('senior')}}">大學伴｜快找</a></li>
                     <li class="l-header-2__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('study-abroad')}}">留學誌｜推薦</a></li>
+                            href="{{route('study-abroad')}}">小學堂｜推薦</a></li>
                     @if(auth()->check())
                     <li class="l-header-2__li nav-item"><a class="nav-link scrollFunction"
                             href="{{route('home')}}">易子學系統</a></li>
@@ -119,14 +119,14 @@
         <!-- nav items -->
         <div class="l-header-2__navItems collapse navbar-collapse" id="navbarSupportedContent">
             <div class="l-header-2__links">
-                <a href="{{route('senior')}}">學長姐｜快找</a>
+                <a href="{{route('senior')}}">大學伴｜快找</a>
             </div>
             <div class="l-header-2__links">
-                <a href="{{route('study-abroad')}}">留學誌｜推薦</a>
+                <a href="{{route('study-abroad')}}">小學堂｜推薦</a>
             </div>
             <div class="l-header-2__links">
                 @if(auth()->check())
-                <a href="{{route('home')}}">易子學系統</a>
+                <a href="{{route('home')}}">SENPAI系統</a>
                 @else
                 <a href="{{route('login')}}">註冊｜登入</a>
                 @endif
@@ -169,16 +169,16 @@
                         <div class="l-footer__siteMap_desk_topic">
                             <h6>關於｜會員</h6>
                             <div>
-                                <a href="{{route('senior')}}">找學長姐</a>
-                                <a href="{{route('university-list')}}">找學校</a>
+                                <a href="{{route('senior')}}">找大學伴</a>
+                                <a href="{{route('university-list')}}">找行業</a>
                                 <a href="{{route('qna')}}">問與答</a>
-                                <a href="{{route('study-abroad')}}">留學誌</a>
+                                <a href="{{route('study-abroad')}}">小學堂</a>
                             </div>
                         </div>
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>關於｜學長姐</h6>
+                            <h6>關於｜大學伴</h6>
                             <div>
-                                <a href="{{route('pay-product-list')}}">成為學長姐</a>
+                                <a href="{{route('pay-product-list')}}">成為大學伴</a>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/yizixue-faq">教戰守則</a>
                                 <a href="/subscription-agreement">付費訂閱條款</a>
@@ -191,7 +191,7 @@
                             <div>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/about-us">關於我們</a>
-                                <a href="">前輩網</a>
+                                <a href="https://yizixue.com.tw">易子學</a>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/service-agreement">服務條款</a>
                                 <!-- 會員規約 -->

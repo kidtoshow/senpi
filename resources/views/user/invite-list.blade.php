@@ -29,7 +29,7 @@
             <div class="row justify-content-md-center">
                 <div style="margin-bottom: 10px;" class="col-xl-10 col-lg-7">
                     <div style="background: #4C2A70; padding:5px" class="card text-white shadow">
-                        <h2 style="margin: 0;" class="text-center">追蹤的學長姐</h2>
+                        <h2 style="margin: 0;" class="text-center">追蹤的大學伴</h2>
                     </div>
                 </div>
                 <div class="col-xl-10 col-lg-7 justify-content-md-center">

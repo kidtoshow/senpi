@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="c-breadcrumbs__prePage"><a href="{{url('/')}}" class="text-decoration-none text-black">首頁</a>
-                    > 好學校關注
+                    > 好行業關注
                 </h4>
             </div>
         </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="l-uniList__popup collapse multi-collapse container" id="asiaMobile">
                         <div class="row g-3">
-                            <a class="o-basicLink col-4" href="{{route('senior', ['area'=>'INTERNATIONAL'])}}">台灣｜國際學校</a>
+                            <a class="o-basicLink col-4" href="{{route('senior', ['area'=>'INTERNATIONAL'])}}">台灣｜國際行業</a>
                             <a class="o-basicLink col-4" href="{{route('senior', ['area'=>'HIGHSCHOOL'])}}">台灣｜高中</a>
                             <a class="o-basicLink col-4" href="{{route('senior', ['area'=>'COLLEGE'])}}">台灣｜大學</a>
                             <a class="o-basicLink col-4" href="{{route('senior', ['country'=>'SINGAPORE'])}}">新加坡</a>
@@ -156,7 +156,7 @@
                         style="fill: #fff; stroke: #4c2a70; stroke-miterlimit: 10;" />
                     <text transform="translate(75 35.5)"
                         style="fill: #4c2a70; font-family: MyriadPro-Regular; font-size: 20px;">
-                        <a href="{{route('senior', ['area'=>'INTERNATIONAL'])}}" class="text-none">台灣｜國際學校</a>
+                        <a href="{{route('senior', ['area'=>'INTERNATIONAL'])}}" class="text-none">台灣｜國際行業</a>
                     </text>
                     <text transform="translate(75 75)"
                         style="fill: #4c2a70; font-family: MyriadPro-Regular; font-size: 20px;">
@@ -227,7 +227,7 @@
                                 <h6>{{ \Illuminate\Support\Str::limit($university->chinese_name, 15) }}</h6>
                                 <h4>{{ \Illuminate\Support\Str::limit($university->english_name, 35) }}</h4>
                                 <h5>目前有<a
-                                        href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位學長姊
+                                        href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位大學伴
                                 </h5>
                             </div>
                         </div>

@@ -79,9 +79,9 @@ class UniversityController extends AdminController
         $form = new Form(new University());
         $form->hidden('slug');
         $form->text('name', __('Name'))->creationRules(['required', 'unique:university,name'])
-            ->updateRules(['required', 'unique:university,name,{{id}}'])->placeholder('學校中文名稱');
+            ->updateRules(['required', 'unique:university,name,{{id}}'])->placeholder('行業中文名稱');
         $form->text('english_name', __('English Name'))->creationRules(['required', 'unique:university,english_name'])
-            ->updateRules(['required', 'unique:university,english_name,{{id}}'])->placeholder('學校英文名稱');
+            ->updateRules(['required', 'unique:university,english_name,{{id}}'])->placeholder('行業英文名稱');
 
         $form->select('country', __('Country'))->options(
             [

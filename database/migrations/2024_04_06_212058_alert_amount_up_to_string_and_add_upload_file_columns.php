@@ -27,8 +27,8 @@ class AlertAmountUpToStringAndAddUploadFileColumns extends Migration
     public function down()
     {
         Schema::table('question_answer', function (Blueprint $table) {
-            $table->integer('amount_up')->nullable()->change();
-            $table->integer('amount_down')->nullable()->change();
+            $table->integer('amount_up')->change();
+            $table->integer('amount_down')->change();
         });
     }
 }

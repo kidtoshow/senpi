@@ -1,6 +1,6 @@
 ## About this system
 
-yizixue 易子學系統
+senpi 大學伴系統
 
 ## About Laravel
 

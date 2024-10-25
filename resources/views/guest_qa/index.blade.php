@@ -58,7 +58,7 @@
                             建立留學諮詢事業
                             <br>
                         </p>
-                        <a class="o-lightBtn m-3" href="{{route('pay-product-list')}}">立即成為學長姐</a>
+                        <a class="o-lightBtn m-3" href="{{route('pay-product-list')}}">立即成為大學伴</a>
                     </div>
                     @endif
                 </div>

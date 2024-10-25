@@ -5,7 +5,7 @@
         <div id="content" style="margin:15px">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="o-sbadminTitle">學長姐收藏名單</h6>
+                    <h6 class="o-sbadminTitle">大學伴收藏名單</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -26,7 +26,7 @@
                                                     >頭像</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
                                                     colspan="1" aria-label="Age: activate to sort column ascending"
-                                                >學校</th>
+                                                >行業</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
                                                     colspan="1" aria-label="Age: activate to sort column ascending"
                                                     >動作</th>

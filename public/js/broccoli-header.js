@@ -1,4 +1,4 @@
-let text = ["海外留學", "升學考試", "國際學校", "選課輔導", "校園導覽", "社團生活", "工作實習", "職涯創業"];
+let text = ["海外留學", "升學考試", "國際行業", "選課輔導", "校園導覽", "社團生活", "工作實習", "職涯創業"];
 let images = [
     "uploads/images/banner_p1.jpg",
     "uploads/images/banner_p2.jpg",
@@ -104,7 +104,7 @@ $(document).ready(function() {
 
         let logoImg = isDesktop ? $logoImg : $logoImgPhone;
         let textColor = screenRoll >= bannerHeight ? "#000000" : "#FFFFFF";
-        let logoSrc = screenRoll >= bannerHeight ? "uploads/images/color_ezl.png" : "uploads/images/logo.png";
+        let logoSrc = screenRoll >= bannerHeight ? "uploads/images/senpai-color.png" : "uploads/images/senpai-bw.png";
         let bgColor = screenRoll >= bannerHeight ? "white" : "transparent";
 
         // 只在需要變更時執行 DOM 操作
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 function bg_change() {
     let navbarState = $(".l-header__hamburger").attr('aria-expanded') === "true";
-    let logoSrc = navbarState ? "uploads/images/color_ezl.png" : "uploads/images/logo.png";
+    let logoSrc = navbarState ? "uploads/images/senpai-color.png" : "uploads/images/senpai-bw.png";
     let bgColor = navbarState ? "white" : "transparent";
 
     $("#logoImgPhone").attr("src", logoSrc);

@@ -68,7 +68,7 @@
             <li class="nav-item active">
                 <a class="o-collectPost_btn" href="/">
                     <i class="bi bi-ui-checks-grid"></i>
-                    易子學前台
+                    Senpai前台
                 </a>
             </li>
             <hr class="sidebar-divider my-0">
@@ -123,12 +123,12 @@
                 <a style="color:white !important" class="o-collectPost_btn collapsed" href="#"
                     data-toggle="collapse" data-target="#invite-list" aria-expanded="false" aria-controls="invite-list">
                     <i style="color:white !important" class="fa fa-users" aria-hidden="true"></i>
-                    學長姊管理
+                    大學伴管理
                 </a>
                 <div id="invite-list" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"
                     style="">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/user/collect-user">收藏學長姐</a>
+                        <a class="collapse-item" href="/user/collect-user">收藏大學伴</a>
                     </div>
                 </div>
             </li>

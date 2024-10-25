@@ -299,7 +299,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="mb-0">學校</p>
+                                        <p class="mb-0">行業</p>
                                     </div>
                                     <div class="col-sm-9">
                                         <p class="text-muted mb-0">{{ is_null(Auth::user()->universityItem)? '' : Auth::user()->universityItem->english_name }}</p>
@@ -308,7 +308,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="mb-0">在學中</p>
+                                        <p class="mb-0">在職</p>
                                     </div>
                                     <div class="col-sm-9">
                                         <p class="text-muted mb-0">{{ Auth::user()->is_study ? '是' : '否' }}</p>
@@ -534,8 +534,8 @@
                                     class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label for="university" class="form-label">學校</label>
-{{--                                <input list="universityList" id="string" placeholder="就讀學校" class="form-control form-control-user" value="{{!empty(Auth::user()->universityItem) ? Auth::user()->universityItem->chinese_name.Auth::user()->universityItem->english_name : ""}}">--}}
+                                <label for="university" class="form-label">行業</label>
+{{--                                <input list="universityList" id="string" placeholder="就讀行業" class="form-control form-control-user" value="{{!empty(Auth::user()->universityItem) ? Auth::user()->universityItem->chinese_name.Auth::user()->universityItem->english_name : ""}}">--}}
                                 <!-- this datalist should contain all the school names -->
 {{--                                <datalist id="universityList">--}}
                                     <!-- I have check the code works, but it can only search chinese name now, we have to add english name into search pool. -->
@@ -545,11 +545,11 @@
 {{--                                    @endforeach--}}
 {{--                                </datalist>--}}
 {{--                                <input type="hidden" name="university" id="universityList-hidden">--}}
-                                <input id="input" placeholder="就讀學校" list="universityList" class="form-control form-control-user" value="{{!empty(Auth::user()->universityItem) ? Auth::user()->universityItem->chinese_name.Auth::user()->universityItem->english_name : ""}}">
+                                <input id="input" placeholder="行業" list="universityList" class="form-control form-control-user" value="{{!empty(Auth::user()->universityItem) ? Auth::user()->universityItem->chinese_name.Auth::user()->universityItem->english_name : ""}}">
                                 <input type="hidden" name="university" id="university">
                             </div>
                             <div class="mb-3">
-                                <label for="is_study" class="form-label">在學中</label>
+                                <label for="is_study" class="form-label">在職</label>
                                 <div class="form-control border-0">
                                     <input id="is_study" type="checkbox" {{Auth::user()->is_study ? 'checked' : ''}} data-toggle="toggle" data-on="是" data-off="否" data-onstyle="success" data-offstyle="danger" name="is_study" value="1">
                                 </div>
