@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>Yizi</b>',
+    'logo-mini' => '<b>SENPAI</b>',
 
     /*
     |--------------------------------------------------------------------------
