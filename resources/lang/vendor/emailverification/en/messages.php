@@ -12,7 +12,7 @@ return [
     'user' => '找不到該電子郵件地址的帳號',
     'resend' => [
         'title' => 'Email 驗證',
-        'warning' => '大學伴將發送一封驗證信至<strong>:email</strong>. 請驗證您的email!',
+        'warning' => '大前輩將發送一封驗證信至<strong>:email</strong>. 請驗證您的email!',
         'instructions' => '如果您沒有收到驗證電子郵件或您的電子郵件地址輸入錯誤，您可以重新傳送驗證郵件。',
         'email' => 'Email',
         'submit' => '重新發信'

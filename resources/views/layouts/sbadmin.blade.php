@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>大學伴 - Dashboard</title>
+    <title>大前輩 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('sb-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
             <!-- Sidebar - Brand -->
             <a class="o-collectPost_btn align-content-center" href="/home">
             <i class="fa fa-home"></i>
-            大學伴系統
+            大前輩系統
             </a>
 
             <!-- Divider -->
@@ -123,12 +123,12 @@
                 <a style="color:white !important" class="o-collectPost_btn collapsed" href="#"
                     data-toggle="collapse" data-target="#invite-list" aria-expanded="false" aria-controls="invite-list">
                     <i style="color:white !important" class="fa fa-users" aria-hidden="true"></i>
-                    大學伴管理
+                    大前輩管理
                 </a>
                 <div id="invite-list" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"
                     style="">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/user/collect-user">收藏大學伴</a>
+                        <a class="collapse-item" href="/user/collect-user">收藏大前輩</a>
                     </div>
                 </div>
             </li>

@@ -117,7 +117,7 @@ class UserController extends AdminController
         $form->text('nickname', __('Nickname'));
         $form->select('role', __('Role'))->options([
             'normal'=>'學弟妹',
-            'vip'=>'大學伴',
+            'vip'=>'大前輩',
         ])->default('normal');
         $form->select('student_proof', __('Student proof'))->options([
             'approve'=>'已通過驗證',

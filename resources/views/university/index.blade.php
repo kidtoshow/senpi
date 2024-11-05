@@ -227,7 +227,7 @@
                                 <h6>{{ \Illuminate\Support\Str::limit($university->chinese_name, 15) }}</h6>
                                 <h4>{{ \Illuminate\Support\Str::limit($university->english_name, 35) }}</h4>
                                 <h5>目前有<a
-                                        href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位大學伴
+                                        href="{{route('senior', ['university' => $university->slug])}}">{{$university->vip->count()}}</a>位大前輩
                                 </h5>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 ## About this system
 
-senpi 大學伴系統
+senpi 前輩網系統
 
 ## About Laravel
 

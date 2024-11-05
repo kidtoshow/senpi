@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="c-breadcrumbs__prePage"><a href="{{url('/')}}" class="text-decoration-none text-black">首頁</a>
-                    > 大學伴快找
+                    > 大前輩快找
                 </h4>
             </div>
         </div>
@@ -310,7 +310,7 @@
                         @empty
                         <div class="col-md-12">
                             <p class="h-100">
-                                目前尚無大學伴資料
+                                目前尚無大前輩資料
                             </p>
                         </div>
                         @endforelse

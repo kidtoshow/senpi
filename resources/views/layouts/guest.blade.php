@@ -33,12 +33,12 @@
             <div class="l-header__navItems collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('senior')}}">大學伴｜快找</a></li>
+                            href="{{route('senior')}}">大前輩｜快找</a></li>
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
                             href="{{route('study-abroad')}}">小學堂｜推薦</a></li>
                     @if(auth()->check())
                     <li class="l-header__li nav-item"><a class="nav-link scrollFunction"
-                            href="{{route('home')}}">大學伴系統</a></li>
+                            href="{{route('home')}}">大前輩系統</a></li>
                     <li class="l-header__li nav-item">
                         <a href="{{route('home')}}">
                             <svg class="l-header__thumbNail" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
@@ -116,14 +116,14 @@
         <!-- nav items -->
         <div class="l-header__navItems collapse navbar-collapse" id="navbarSupportedContent">
             <div class="l-header__links">
-                <a href="{{route('senior')}}">大學伴｜快找</a>
+                <a href="{{route('senior')}}">大前輩｜快找</a>
             </div>
             <div class="l-header__links">
                 <a href="{{route('study-abroad')}}">小學堂｜推薦</a>
             </div>
             <div class="l-header__links">
                 @if(auth()->check())
-                <a href="{{route('home')}}">大學伴系統</a>
+                <a href="{{route('home')}}">大前輩系統</a>
                 @else
                 <a href="{{route('login')}}">註冊｜登入</a>
                 @endif
@@ -157,7 +157,7 @@
                     <!-- desk ver -->
                     <div class="l-footer__siteMap_desk">
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>加入｜大學伴</h6>
+                            <h6>加入｜大前輩</h6>
                             <div>
                                 <a href="{{route('login')}}">登入｜註冊</a>
                                 <a href="https://lin.ee/RjpZvEC">聯絡我們</a>
@@ -166,16 +166,16 @@
                         <div class="l-footer__siteMap_desk_topic">
                             <h6>關於｜會員</h6>
                             <div>
-                                <a href="{{route('senior')}}">找大學伴</a>
+                                <a href="{{route('senior')}}">找大前輩</a>
                                 <a href="{{route('university-list')}}">找行業</a>
                                 <a href="{{route('qna')}}">問與答</a>
                                 <a href="{{route('study-abroad')}}">小學堂</a>
                             </div>
                         </div>
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>關於｜大學伴</h6>
+                            <h6>關於｜大前輩</h6>
                             <div>
-                                <a href="{{route('pay-product-list')}}">成為大學伴</a>
+                                <a href="{{route('pay-product-list')}}">成為大前輩</a>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/yizixue-faq">教戰守則</a>
                                 <a href="/subscription-agreement">付費訂閱條款</a>
@@ -184,7 +184,7 @@
                             </div>
                         </div>
                         <div class="l-footer__siteMap_desk_topic">
-                            <h6>關於｜大學伴</h6>
+                            <h6>關於｜大前輩</h6>
                             <div>
                                 <!-- please replace with the real back-end code -->
                                 <a href="/about-us">關於我們</a>

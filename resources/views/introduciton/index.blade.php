@@ -115,7 +115,7 @@
                     <!-- video & audio -->
                     @if(is_null($Data['user']->profile_video))
                     <div>
-                        <a class="o-tag" onClick="alert('大學伴尚未上傳影音');">
+                        <a class="o-tag" onClick="alert('大前輩尚未上傳影音');">
                             <i class="bi bi-play-fill"></i>
                         </a>
                     </div>
@@ -128,7 +128,7 @@
                     @endif
                     @if(is_null($Data['user']->profile_voice))
                     <div>
-                        <a class="o-tag" onClick="alert('大學伴尚未上傳影音');">
+                        <a class="o-tag" onClick="alert('大前輩尚未上傳影音');">
                             <i class="bi bi-mic-fill"></i>
                         </a>
                     </div>

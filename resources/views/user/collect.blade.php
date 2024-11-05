@@ -5,7 +5,7 @@
         <div id="content" style="margin:15px">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="o-sbadminTitle">大學伴收藏名單</h6>
+                    <h6 class="o-sbadminTitle">大前輩收藏名單</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

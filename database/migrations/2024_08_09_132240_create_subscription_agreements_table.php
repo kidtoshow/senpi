@@ -15,7 +15,7 @@ class CreateSubscriptionAgreementsTable extends Migration
     {
         Schema::create('subscription_agreements', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('content')->comment('大學伴服務款內文');
+            $table->text('content')->comment('大前輩服務款內文');
             $table->timestamps();
         });
     }

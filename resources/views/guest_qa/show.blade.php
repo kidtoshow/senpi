@@ -252,7 +252,7 @@
                             <h6 class="l-qnaGuest__quest">我們一起幫助學弟妹</h6>
                             </div>
                             <div class="col-md-12 text-center">
-                            <a class="l-qnaGuest__join" href="{{route('pay-product-list')}}">點擊成為大學伴</a>
+                            <a class="l-qnaGuest__join" href="{{route('pay-product-list')}}">點擊成為大前輩</a>
                             </div>
                         </div>
                     </div>
