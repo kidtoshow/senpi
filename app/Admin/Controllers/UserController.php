@@ -116,7 +116,7 @@ class UserController extends AdminController
         $form->text('name', __('Name'));
         $form->text('nickname', __('Nickname'));
         $form->select('role', __('Role'))->options([
-            'normal'=>'學弟妹',
+            'normal'=>'會員',
             'vip'=>'大前輩',
         ])->default('normal');
         $form->select('student_proof', __('Student proof'))->options([
@@ -126,13 +126,13 @@ class UserController extends AdminController
         ])->default('pending');
         $form->image('avatar', __('Avatar'));
         $form->datetime('birth_day', __('Birth day'))->default(date('Y-m-d'));
-        $form->text('university', __('University'))->datalist(University::all()->transform(function ($item, $key) {
+        $form->text('university', __('Industry'))->datalist(University::all()->transform(function ($item, $key) {
             return [
                 'id' => $item->id,
                 'name' => $item->chinese_name. $item->english_name
             ];
         })->pluck('name', 'id'));
-        $form->switch('is_study', __('Is study'))->states(['在學中'=>true, '已畢業'=>false]);
+        $form->switch('is_study', __('Is working'))->states(['在學中'=>true, '已畢業'=>false]);
         $form->email('email', __('Email'));
         $form->mobile('phone', __('Phone'));
         $form->text('line', __('Line'));
