@@ -149,8 +149,8 @@
                                     </div>
                                     <!-- submit -->
                                     <div class="form-group">
-                                        <button type="submit" class=" text-white btn btn-user btn-block"
-                                            style="background-color: #4C2A70">
+                                        <button type="submit" class=" text-white btn btn-block"
+                                            style="background-color: #FE9300">
                                             註冊
                                         </button>
                                     </div>
