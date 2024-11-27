@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fb6d8f6f5490aff4515f8f9b1282f8f",
+    "content-hash": "d85fc8480ea6e84b2e949e8f79143771",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1128,6 +1128,53 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "hanson/rainbow",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Hanson/rainbow.git",
+                "reference": "83ff49841659534b6346d02bf521753b87b55c05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Hanson/rainbow/zipball/83ff49841659534b6346d02bf521753b87b55c05",
+                "reference": "83ff49841659534b6346d02bf521753b87b55c05",
+                "shasum": ""
+            },
+            "require-dev": {
+                "encore/laravel-admin": "^1.7"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hanson\\Rainbow\\RainbowServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hanson\\Rainbow\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hanson",
+                    "email": "h@hanc.cc"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/Hanson/rainbow/issues",
+                "source": "https://github.com/Hanson/rainbow/tree/master"
+            },
+            "time": "2020-02-06T14:15:25+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -6464,7 +6511,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "hanson/rainbow": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
