@@ -145,7 +145,7 @@
                 <!-- logo -->
                 <div class="col-12 col-md-6 col-lg-4 mx-auto">
                     <div class="l-footer__brand h-100">
-                        <img src="{{asset('uploads/images/yzl-footer-logo.png')}}" alt="footer logo">
+                        <img src="{{asset('uploads/images/hang-jia-logo-white.png')}}" alt="footer logo">
                         <div class="row g-3">
                             <p class="col-md-12 text-center">
                                 行家在線有限公司 | 統一編號 83453577 | all rights reserved<br>

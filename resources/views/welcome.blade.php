@@ -123,7 +123,7 @@
                 </div>
             </div>
         </div>
-        <!-- University section-->
+        <!-- Industry section-->
         <div class="col-md-12 p-0 mt-5">
             <!-- title -->
             <h3 class="o-welcomeTitle mb-5">
@@ -464,70 +464,18 @@
             </div>
         </div>
     </div>
-    <!-- local -->
-    <div class="container-fluid p-0 mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <section class="l-innerbody__local">
-                    <h6>地區找大前輩</h6>
-                    <div class="row">
-                        <p class="col-md-4">
-                            <a href="{{route('university-list', ['country'=>'USA'])}}"
-                                class="text-decoration-none text-black">美國</a>｜
-                            <a href="{{route('university-list', ['country'=>'CANADA'])}}"
-                                class="text-decoration-none text-black">加拿⼤</a>｜
-                            <a href="{{route('university-list', ['country'=>'UK'])}}"
-                                class="text-decoration-none text-black">英國</a>｜
-                            <a href="{{route('university-list', ['country'=>'AUSTRALIA'])}}"
-                                class="text-decoration-none text-black">澳洲</a>｜
-                            <a href="{{route('university-list', ['country'=>'NEW ZEALAND'])}}"
-                                class="text-decoration-none text-black">紐⻄蘭</a>
-                        </p>
-                        <p class="col-md-2">
-                            <a href="{{route('university-list', ['country'=>'FRANCE'])}}"
-                                class="text-decoration-none text-black">法國</a>｜
-                            <a href="{{route('university-list', ['country'=>'GERMANY'])}}"
-                                class="text-decoration-none text-black">德國</a>｜
-                            <a href="{{route('university-list', ['country'=>'EUROPE'])}}"
-                               class="text-decoration-none text-black">其他歐洲</a>
-                        </p>
-                        <p class="col-md-4">
-                            <a href="{{route('university-list', ['country'=>'TAIWAN'])}}"
-                                class="text-decoration-none text-black">台灣</a>｜
-                            <a href="{{route('university-list', ['country'=>'SINGAPORE'])}}"
-                                class="text-decoration-none text-black">新加坡</a>｜
-                            <a href="{{route('university-list', ['country'=>'JAPAN'])}}"
-                                class="text-decoration-none text-black">⽇本</a>｜
-                            <a href="{{route('university-list', ['country'=>'KOREA'])}}"
-                                class="text-decoration-none text-black">韓國</a>｜
-                            <a href="{{route('university-list', ['country'=>'ASIA'])}}"
-                               class="text-decoration-none text-black">其他亞洲</a>
-                        </p>
-                        <p class="col-md-2">
-                            <a href="{{route('university-list', ['country' => 'CHINA'])}}"
-                                class="text-decoration-none text-black">中國</a>｜
-                            <a href="{{route('university-list', ['country'=>'HONG KONG'])}}"
-                                class="text-decoration-none text-black">香港</a>｜
-                            <a href="{{route('university-list', ['country'=>'MACAU'])}}"
-                                class="text-decoration-none text-black">澳⾨</a>
-                        </p>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
 </div>
 
 @endsection
 
 @section('page_js')
 <script>
-    $('.like-user').click(function () {
+    $('.like-user').click(function() {
         let that = $(this);
         $.ajax({
             url: 'like-user/' + $(this).data('id'),
             method: 'GET',
-            success: function (res) {
+            success: function(res) {
                 if (res.operator === 'no') {
                     alert(res.message);
                 } else if (res.operator === 'add') {
@@ -540,18 +488,18 @@
                     that.children('span').text(res.total);
                 }
             },
-            error: function (error) {
+            error: function(error) {
                 console.log(error)
             }
         });
     })
 
-    $('.collect-user').click(function () {
+    $('.collect-user').click(function() {
         let that = $(this);
         $.ajax({
             url: 'collect-user/' + $(this).data('id'),
             method: 'GET',
-            success: function (res) {
+            success: function(res) {
                 if (res.operator === 'no') {
                     alert(res.message);
                 } else if (res.operator === 'add') {
@@ -564,7 +512,7 @@
                     that.children('span').text(res.total);
                 }
             },
-            error: function (error) {
+            error: function(error) {
                 console.log(error)
             }
         });
