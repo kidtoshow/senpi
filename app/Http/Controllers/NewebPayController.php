@@ -8,7 +8,6 @@ use App\Services\NewebPayService;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class NewebPayController extends Controller
 {
@@ -49,20 +48,15 @@ class NewebPayController extends Controller
     public function handleNewebPaymentCallback(Request $request)
     {
         $parameters = $request->all();
-        logger($parameters);
 
-        // 重新生成 CheckValue 並比對
         $service = new NewebPayService();
-
 
         $result = $service->decodeResult($parameters['TradeInfo']);
 
-        logger($result);
         // 根據回傳的資料更新訂單狀態
-        if ($result['Status'] === 'SUCCESS') {
+        if ($result->Status === 'SUCCESS') {
             // 支付成功，更新訂單狀態，
-            logger('藍新交易完成');
-            $order = PayOrder::where('transactionId', $result['MerchantOrderNo'])->get();
+            $order = PayOrder::where('transactionId', $result->Result->MerchantOrderNo)->get();
             if(!is_null($order)) {
                 $order->first()->update([
                     'order_status' => 4
@@ -92,10 +86,9 @@ class NewebPayController extends Controller
             }
         } else {
             // 支付失敗
-            logger('藍新交易失敗');
-            $order = PayOrder::where('transactionId', $result['MerchantTradeNo'])->get();
+            $order = PayOrder::where('transactionId', $result->Result->MerchantTradeNo)->get();
             if(is_null($order)){
-                return route('pay-product-list')->with(['message' =>'未查詢到'.$result['MerchantTradeNo']]);
+                return route('pay-product-list')->with(['message' =>'未查詢到'.$result->Result->MerchantTradeNo]);
             }
             $order->first()->update([
                 'order_status' => 3

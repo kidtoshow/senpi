@@ -78,7 +78,6 @@ class NewebPayService
 
     public function decodeResult($data1)
     {
-        logger($data1);
         $edata1=$this->strippadding(openssl_decrypt(hex2bin($data1), "AES-256-CBC", $this->hashKey, OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING, $this->hashIv));
 
         return $edata1;
