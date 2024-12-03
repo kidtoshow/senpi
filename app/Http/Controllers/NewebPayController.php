@@ -54,7 +54,8 @@ class NewebPayController extends Controller
         // 重新生成 CheckValue 並比對
         $service = new NewebPayService();
 
-        $result = $service->decodeResult($parameters->TradeInfo);
+
+        $result = $service->decodeResult($parameters['TradeInfo']);
 
         logger($result);
         // 根據回傳的資料更新訂單狀態
