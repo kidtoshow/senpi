@@ -110,7 +110,7 @@ Route::get('carousel-list', 'CarouselController@list')->name('carousel-list');
 
 // newebpay return
 Route::any('newebpay-return-url', 'NewebPayController@returnUrl')->name('newebpay-return-url');
-Route::any('newebpay-notify-url', 'NewebPayayController@handleNewebPaymentCallback')->name('newebpay-notify-url');
+Route::any('newebpay-notify-url', 'NewebPayController@handleNewebPaymentCallback')->name('newebpay-notify-url');
 
 //Verify
 Route::get('register/verify', 'Auth\RegisterController@verify')->name('verifyEmailLink');
