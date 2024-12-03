@@ -51,14 +51,12 @@ class NewebPayController extends Controller
 
         $service = new NewebPayService();
 
-        $result = $service->decodeResult($parameters['TradeInfo']);
+        $result = json_decode($service->decodeResult($parameters['TradeInfo']), true);
 
-        logger($result);
-        logger(json_decode($result, true));
         // 根據回傳的資料更新訂單狀態
-        if ($result->Status === 'SUCCESS') {
+        if ($result['Status'] === 'SUCCESS') {
             // 支付成功，更新訂單狀態，
-            $order = PayOrder::where('transactionId', $result->Result->MerchantOrderNo)->get();
+            $order = PayOrder::where('transactionId', $result['Result']['MerchantOrderNo'])->get();
             if(!is_null($order)) {
                 $order->first()->update([
                     'order_status' => 4
@@ -88,9 +86,9 @@ class NewebPayController extends Controller
             }
         } else {
             // 支付失敗
-            $order = PayOrder::where('transactionId', $result->Result->MerchantTradeNo)->get();
+            $order = PayOrder::where('transactionId', $result['Result']['MerchantTradeNo'])->get();
             if(is_null($order)){
-                return route('pay-product-list')->with(['message' =>'未查詢到'.$result->Result->MerchantTradeNo]);
+                return route('pay-product-list')->with(['message' =>'未查詢到'.$result['Result']['MerchantTradeNo']]);
             }
             $order->first()->update([
                 'order_status' => 3
