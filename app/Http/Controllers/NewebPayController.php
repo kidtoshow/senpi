@@ -53,6 +53,8 @@ class NewebPayController extends Controller
 
         $result = $service->decodeResult($parameters['TradeInfo']);
 
+        logger($result);
+        logger(json_decode($result, true));
         // 根據回傳的資料更新訂單狀態
         if ($result->Status === 'SUCCESS') {
             // 支付成功，更新訂單狀態，
