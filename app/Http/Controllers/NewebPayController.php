@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\PayOrder;
 use App\PayProduct;
 use App\Services\NewebPayService;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -47,27 +49,56 @@ class NewebPayController extends Controller
     public function handleNewebPaymentCallback(Request $request)
     {
         $parameters = $request->all();
-
-        // 檢查簽名是否正確
-        $checkValue = $parameters['CheckValue'];
-        unset($parameters['CheckValue']);  // 移除原有的 CheckValue 參數
+        logger($parameters);
 
         // 重新生成 CheckValue 並比對
         $service = new NewebPayService();
-        $generatedCheckValue = $service->generateCheckValue($parameters);
 
-        if ($checkValue !== $generatedCheckValue) {
-            Log::error('NewebPay - CheckValue mismatch!');
-            return response()->json(['error' => 'Invalid response from payment gateway.']);
-        }
+        $result = $service->decodeResult($parameters['TradeInfo']);
 
+        logger($result);
         // 根據回傳的資料更新訂單狀態
-        if ($parameters['TradeStatus'] === '1') {
+        if ($result['Status'] === 'SUCCESS') {
             // 支付成功，更新訂單狀態，
             logger('藍新交易完成');
+            $order = PayOrder::where('transactionId', $result['MerchantOrderNo'])->get();
+            if(!is_null($order)) {
+                $order->first()->update([
+                    'order_status' => 4
+                ]);
+            }
+            $user = User::find($order->first()->user_id);
+            if($user->expired >= now()){
+                $add_time = Carbon::parse($user->expired)->addMonth($order->first()->product->pay_time);
+                $remark = $user->expired . '->' .$add_time;
+                $user->update([
+                    'role' => 'vip',
+                    'expired' => $add_time
+                ]);
+                $order->first()->update([
+                    'remark' => $remark
+                ]);
+            } else {
+                $add_time = now()->addMonth($order->first()->product->pay_time);
+                $remark = $user->expired . '->' .$add_time;
+                $user->update([
+                    'role' => 'vip',
+                    'expired' => $add_time
+                ]);
+                $order->first()->update([
+                    'remark' => $remark
+                ]);
+            }
         } else {
             // 支付失敗
             logger('藍新交易失敗');
+            $order = PayOrder::where('transactionId', $result['MerchantTradeNo'])->get();
+            if(is_null($order)){
+                return route('pay-product-list')->with(['message' =>'未查詢到'.$result['MerchantTradeNo']]);
+            }
+            $order->first()->update([
+                'order_status' => 3
+            ]);
         }
 
         return response()->json(['status' => 'success']);
@@ -76,5 +107,6 @@ class NewebPayController extends Controller
     public function returnUrl(Request $request)
     {
         logger($request->all());
+        return redirect(route('pay-order-list'));
     }
 }

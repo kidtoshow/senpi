@@ -32,9 +32,7 @@ class NewebPayService
             'Amt' => $order->product->price,
             'ReturnURL' => $this->returnUrl,
             'NotifyURL' => $this->notifyUrl,
-//            'ClientBackURL' => route('pay-product-list'),
-            'ItemDesc' => $order->product->description,
-            // 其他必要的參數...
+            'ItemDesc' => strip_tags($order->product->description),
         ];
 
         // 產生簽名
@@ -47,13 +45,9 @@ class NewebPayService
     {
         // 對藍新金流參數進行加密
         $data = http_build_query($parameters);
-//        logger('key:'.$this->hashKey);
-//        logger('iv:'.$this->hashIv);
-//        logger($this->notifyUrl);
-//        logger($this->returnUrl);
         $edata = bin2hex(openssl_encrypt($data, 'AES-256-CBC', $this->hashKey, OPENSSL_RAW_DATA, $this->hashIv));
 
-        $hashs = 'HashKey='.$this->hashKey .'&'. $edata .'&HashIV'. $this->hashIv;
+        $hashs = 'HashKey='.$this->hashKey .'&'. $edata .'&HashIV='. $this->hashIv;
         $hash =  strtoupper(hash('sha256',$hashs));
 
         return ['TradeInfo' => $edata, 'TradeSha' => $hash];
@@ -81,4 +75,22 @@ class NewebPayService
 
         return $formHtml;
     }
+
+    public function decodeResult($data1)
+    {
+        $edata1=$this->strippadding(openssl_decrypt(hex2bin($data1), "AES-256-CBC", $$this->hashKey, OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING, $this->hashIv));
+
+        return $edata1;
+    }
+
+    protected function strippadding($string) {
+        $slast = ord(substr($string, -1));
+        $slastc = chr($slast);
+        $pcheck = substr($string, -$slast);
+        if (preg_match("/$slastc{" . $slast . "}/", $string)) {
+            $string = substr($string, 0, strlen($string) - $slast);
+            return $string;
+        } else {
+            return false;
+        }}
 }
