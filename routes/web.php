@@ -101,16 +101,16 @@ Route::group(['middleware' => ['auth', 'isEmailVerified']],function() {
     Route::get('pay-order', 'PayOrderController@index')->name('pay-order-list');
     Route::get('university-list', 'UniversityController@index')->name('university-list');
 
-    //ecpay
-    Route::post('pay-product-ecpay/{id}', 'PayProductController@ecpayStore')->name('pay-product-ecpay');
+    //newebpay
+    Route::post('pay-product-newebpay/{id}', 'NewebPayController@createPaymentForm')->name('pay-product-newebpay');
 });
 
 //carousel
 Route::get('carousel-list', 'CarouselController@list')->name('carousel-list');
 
-// ecpay return
-Route::any('ecpay-order-result', 'EcpayController@ecpayOrderResult')->name('ecpay-order-result');
-Route::any('ecpay-return-url', 'EcpayController@ecpayReturn')->name('ecpay-return-url');
+// newebpay return
+Route::any('newebpay-return-url', 'NewebPayController@returnUrl')->name('newebpay-return-url');
+Route::any('newebpay-notify-url', 'NewebPayayController@handleNewebPaymentCallback')->name('newebpay-notify-url');
 
 //Verify
 Route::get('register/verify', 'Auth\RegisterController@verify')->name('verifyEmailLink');
