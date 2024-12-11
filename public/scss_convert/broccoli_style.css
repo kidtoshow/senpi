@@ -4708,6 +4708,7 @@ section {
   caret-color: #FE9300;
   letter-spacing: 0.2rem;
   font-size: var(--text-xl);
+  padding-left: var(--spacing-32);
 }
 
 .o-welcomeTitle a {
