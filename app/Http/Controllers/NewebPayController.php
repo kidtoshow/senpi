@@ -94,7 +94,7 @@ class NewebPayController extends Controller
                     'TransNum' => '',
                     'MerchantOrderNo' => $order->first()->transactionId,
                     'BuyerName' => $order->first()->user->name,
-                    'BuyerAddress' => $order->first()->user()->address,
+                    'BuyerAddress' => $order->first()->user->address,
                     'BuyerEmail' => $order->first()->user->email,
                     'Category' => 'B2C',
                     'TaxType' => '1',
