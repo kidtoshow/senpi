@@ -55,8 +55,13 @@
                                      <!-- this section have been updated, please check the from still submit the right infos. -->
                                     <div class="form-group {{ $errors->has('university') ? ' has-error' : '' }}">
                                         <!-- this input tag can search for the school names -->
-                                        <input id="input" placeholder="行業" list="universityList" class="form-control form-control-user o-input">
-                                        <input type="hidden" name="university" id="university">
+                                        <select name="university" id="university" class="form-control o-input" placeholder="行業">
+                                            @foreach($Data['universities'] as $university)
+                                            <option value="{{$university['value']}}" {{old('university') === $university['value'] ?'selected':''}} >{{$university['label']}}</option>
+                                            @endforeach
+                                        </select>
+{{--                                        <input id="input" placeholder="行業" list="universityList" class="form-control form-control-user o-input">--}}
+{{--                                        <input type="hidden" name="university" id="university">--}}
                                         @if ($errors->has('university'))
                                         <span class="help-block alert-danger">
                                             <strong>{{ $errors->first('university') }}</strong>
@@ -175,29 +180,29 @@
 
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script>
-        const data = {!!  json_encode($Data['universities']) !!};
-        const tags = {!! json_encode($Data['universities']->pluck('label')) !!};
+        {{--const data = {!!  json_encode($Data['universities']) !!};--}}
+        {{--const tags = {!! json_encode($Data['universities']->pluck('label')) !!};--}}
 
-        $('#input').autocomplete({
-            source : tags,
-            select : showResult,
-            focus : showResult,
-            change :showResult
-        })
+        {{--$('#input').autocomplete({--}}
+        {{--    source : tags,--}}
+        {{--    select : showResult,--}}
+        {{--    focus : showResult,--}}
+        {{--    change :showResult--}}
+        {{--})--}}
 
-        function showResult(event, ui) {
-            let value = ui.item.value;
-            let id = '';
-            for (var i = 0; i < data.length; i++) {
-                if (value == data[i].label) {
-                    id = data[i].value;
-                    break;
-                }
-            }
-            $('#input').val(value);
-            $("#university").val(id);
-            return false;
-        }
+        {{--function showResult(event, ui) {--}}
+        {{--    let value = ui.item.value;--}}
+        {{--    let id = '';--}}
+        {{--    for (var i = 0; i < data.length; i++) {--}}
+        {{--        if (value == data[i].label) {--}}
+        {{--            id = data[i].value;--}}
+        {{--            break;--}}
+        {{--        }--}}
+        {{--    }--}}
+        {{--    $('#input').val(value);--}}
+        {{--    $("#university").val(id);--}}
+        {{--    return false;--}}
+        {{--}--}}
 
         $('#send-verify').click(function(e){
             e.preventDefault();
